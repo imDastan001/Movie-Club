@@ -17,18 +17,16 @@ const login = () => {
 
   // validation functions 
   const Dovalidation = () => {
-    const message = validcheck(email, password) 
+    const message = validcheck(email, password,IsSignin,Username) 
     if (message === null) {
       IsSignin?sendloginData(email,password,navigate):setIsSignin(registeration(Username,email,password));
       
     }
-    else{
     setErrorMessage(message);
-    }
   };
   
   const toogleIsSignin = () => {
-    console.log(IsSignin);
+
     setIsSignin(!IsSignin);
   };
 
@@ -36,9 +34,9 @@ const login = () => {
   return (
     
     <>
-    <Header/>
-      <div className="absolute h-full w-full">
-        <img className="h-full w-full" src={Image} alt="backgroundImg" />
+    <Header signin={IsSignin}/>
+      <div className="absolute h-full w-full bg-black">
+        <img className="h-full w-full  opacity-40" src={Image} alt="backgroundImg" />
       </div>
 
       <div className="px-6 absolute bg-black bg-opacity-90 flex w-96 mx-auto left-0 right-0 my-32">

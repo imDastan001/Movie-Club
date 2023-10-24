@@ -1,5 +1,5 @@
 import axios from "axios";
-import apiLogin from "./constants"
+import {apiLogin} from "./constants"
 
 export   const sendloginData = async (email,password,navigate) => {
 
@@ -9,12 +9,12 @@ export   const sendloginData = async (email,password,navigate) => {
     };
     try {
       const response = await axios.post(
-        {apiLogin},
+        apiLogin,
         data
       );
       const token = response.data.token;
       localStorage.setItem('token',token);
-      console.log("response is send", token);
+     
       navigate('/browse');
     } 
     catch (error) {
