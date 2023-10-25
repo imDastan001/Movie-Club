@@ -12,7 +12,7 @@ const useTrailer=(id)=>{
     const dispatch = useDispatch()
     const findTrailer = async () => {
     const data = await fetch(
-      "https://api.themoviedb.org/3/movie/"+id+"/videos?language=en-US",
+      "https://api.themoviedb.org/3/movie/"+id+"/videos",
       API_Option
     );
     const newdata = await data.json();

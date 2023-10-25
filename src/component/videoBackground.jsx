@@ -9,18 +9,19 @@ const VideoBackground = ({id}) => {
   const {key} = trailer;
   return (
       <>
-    <div className="w-screen">
+  
       <iframe
-      className="w-screen aspect-video"
-        src={"https://www.youtube.com/embed/"+key+"?rel=0&amp;autoplay=1&mute=1"}
+      className="w-full"
+        src={"https://www.youtube.com/embed/"+key}
         title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        height="700"
       ></iframe>
-      </div>
+  
     </>
   );
 };
 export default VideoBackground;
 
 // 
++"?rel=0&amp;autoplay=1&mute=1"

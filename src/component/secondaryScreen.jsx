@@ -1,7 +1,9 @@
+import MovieList from "./movielist";
+
 const SecondaryScreen=()=>{
-    return(
+return(
 <>
-secondary screen
+<MovieList title={"Now Playing"}/>
 </>
 
     )

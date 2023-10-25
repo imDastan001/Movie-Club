@@ -4,7 +4,7 @@ import VideoBackground from "./videoBackground"
 const MainScreen = () => {
   const movie = useSelector((store) => store.movies?.nowPlayingMovies);
   if (!movie) return;
-  const mainMovie = movie[1];
+  const mainMovie = movie[0];
 
   const {original_title,overview,id}=mainMovie
   
@@ -14,8 +14,10 @@ const MainScreen = () => {
 
   return (
     <>
+      <div className="h-screen bg-black">
       <VideoTitle title={original_title} overview={overview} />
       <VideoBackground id={id}/>
+      </div>
     </>
   );
 };

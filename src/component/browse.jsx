@@ -8,8 +8,10 @@ const browse = () => {
   return (
     <>
       <Header />
-      <MainScreen   />
-      <SecondaryScreen />
+    
+      <MainScreen/>
+      {/* <SecondaryScreen /> */}
+    
     </>
   );
 };
