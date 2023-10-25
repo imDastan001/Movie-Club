@@ -14,19 +14,8 @@ const MovieList = ({ title }) => {
           <h1 className="text-white text-3xl ml-8">{title}</h1>
         </div>
         <div className="flex overflow-x-auto">
-            <MovieCard title={original_title} poster={poster_path} />
-            <MovieCard title={original_title} poster={poster_path} />
-            <MovieCard title={original_title} poster={poster_path} />
-            <MovieCard title={original_title} poster={poster_path} />
-            <MovieCard title={original_title} poster={poster_path} />
-            <MovieCard title={original_title} poster={poster_path} />
-            <MovieCard title={original_title} poster={poster_path} />
-            <MovieCard title={original_title} poster={poster_path} />
-            <MovieCard title={original_title} poster={poster_path} />
-            <MovieCard title={original_title} poster={poster_path} />
-            <MovieCard title={original_title} poster={poster_path} />
-            <MovieCard title={original_title} poster={poster_path} />
-            <MovieCard title={original_title} poster={poster_path} /> 
+            {movielist.map(x=> <MovieCard key={x.id} title={x.original_title} poster={x.poster_path} />)}
+            
         </div>
        
       </div>

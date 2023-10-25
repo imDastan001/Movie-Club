@@ -1,5 +1,5 @@
 import { useEffect} from "react";
-import { API_Option } from "../utils/constants";
+import { API_Option } from "../utils/secret";
 import { useDispatch } from "react-redux";
 import { addTrailerToPlay } from "../utils/movieSlice";
 

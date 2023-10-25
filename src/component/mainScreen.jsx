@@ -14,10 +14,8 @@ const MainScreen = () => {
 
   return (
     <>
-      <div className="h-screen bg-black">
       <VideoTitle title={original_title} overview={overview} />
       <VideoBackground id={id}/>
-      </div>
     </>
   );
 };
