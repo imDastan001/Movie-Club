@@ -1,6 +1,6 @@
 import {posterUrl} from "../utils/constants"
 const MovieCard=({title,poster})=>{
-    console.log(poster);
+
     return (
         <>
         <div className="mt-6 mx-8 w-1/5">

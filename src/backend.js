@@ -9,7 +9,6 @@ app.use(cors());
 
 app.post('/api/register',(req,res)=>{
     const receivedData = req.body;
-    console.log(receivedData);
     res.send(true);
 })
 
